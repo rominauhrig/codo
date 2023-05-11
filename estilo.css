@@ -1,0 +1,248 @@
+body{
+
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(202, 201, 201);
+    margin: 0;
+
+}
+
+.contenedor{
+    display: grid;
+    grid-template: auto auto auto auto auto / 20% auto 20%;
+    grid-template-areas:
+                         " logo header header header header"
+                         "cuerpo cuerpo cuerpo cuerpo cuerpo"
+                         "pie pie pie pie pie";
+    
+}
+
+
+.imagen-logo{
+    position: absolute;
+    margin: 15px 0 0 70px;
+    width: 80px;
+    
+}
+
+.menu{
+    
+    grid-area: header;
+    display: flex;
+    justify-content: right;
+    background: linear-gradient(rgb(202, 201, 201), rgb(68,251,93));
+    background-color:rgb(68, 251, 93);
+    margin: 0px;
+    align-items:center;
+    height: 70px;
+    border-radius: 5px;
+    padding-right: 30px;
+}
+
+
+.menu a{
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.pagina-actual{
+
+    border-radius: 5px;
+    background-color: rgb(27, 201, 50);
+
+}
+
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+.menu a:hover{
+    transition: 500ms;
+    border-radius: 5px;
+    background-color: rgb(27, 201, 50);
+
+}
+
+.home {
+    padding: 60px;
+    grid-area: cuerpo;
+    text-align: center;
+
+}
+.home h1, h2, h3{
+    margin-top: 30px;
+}
+
+
+.imagen-reparando{
+    margin-top: 50px;
+    width:50%;
+    box-shadow: 10px 10px 30px 15px #000000;
+}
+
+
+
+
+.pie-pagina{
+    grid-area: pie;
+    text-align: center;
+    background: linear-gradient(rgb(202,201,201),rgb(90, 89, 89));
+    padding: 10px;
+    
+}
+
+.pie-pagina a{
+    padding: 20px;
+}
+.pie-pagina img:hover{
+    transition: 1s;
+    transform: scale(1.5);
+}
+.copyright {
+
+    color: black;
+    font-size: 13px;
+    
+
+}
+
+.cuerpo-formulario{
+    margin-left: 60px;
+    grid-area: cuerpo;
+}
+form{
+
+    margin: 40px 0;
+
+}
+form label{
+
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+
+}
+.input-padron{
+
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+    border-radius: 3px;
+
+}
+
+.enviar{
+    margin-left: 60px;
+    width: 30%;
+    padding: 15px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background:rgb(15, 227, 43);
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+
+}
+
+.enviar:hover{
+
+    background: rgb(11, 118, 25);
+    transform: scale(1.1);
+    
+}
+
+.mapa{
+    margin: 0 0 60px 20px;
+    width: 50%;
+    box-shadow: 10px 10px 30px 15px black;
+}
+
+.logo{
+    grid-area: logo;
+    display: flex;
+    background: linear-gradient(rgb(202, 201, 201), rgb(68,251,93));
+    background-color: rgb(68, 251, 93);
+    align-items: center;
+    height: 70px;
+    border-radius: 5px;
+    padding-right: 30px;
+}
+
+
+.grillaDeProductos {
+     display:  grid;
+     grid-template-columns: auto auto auto;
+     gap: 10px
+}
+.grid-items {
+    padding: 10px;
+}
+
+.enlaceProducto {
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .contenedor{
+    grid-template: auto auto auto auto/ 100% ;
+    grid-template-areas:
+                         "header" 
+                         "logo"
+                         "cuerpo"
+                         "pie" ;
+}
+.logo{
+    justify-content: center;
+    padding: 0px;
+    background: none;
+    z-index: 1;
+}
+.imagen-logo{
+    width: 160px;
+    margin: 0;
+    opacity: 15%;
+    padding: 10px;
+}
+.menu{
+    font-size: 0.8em;
+    margin: 0px;
+    justify-content: center;
+    padding: 0;
+    z-index: 2;
+    opacity: 70%;   
+}
+.home{
+    margin-top: -100px;
+}
+.home h1, h2, h3{
+    font-size: 1em;
+}
+.imagen-reparando{
+    width: 100%;
+}
+
+.cuerpo-formulario{
+    margin-left: 10px;
+    
+}
+
+.input-padron{
+    width: 80%;
+}
+
+.enviar{
+    font-size: 18px;
+    width: 65%;
+}
+.mapa{
+    width: 90%;
+    margin: 0 0 25px 10px;
+    box-shadow: 5px 5px 15px 5px black;
+}}
